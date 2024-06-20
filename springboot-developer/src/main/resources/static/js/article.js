@@ -41,6 +41,7 @@ if (modifyButton) {
 const createButton = document.getElementById('create-btn');
 
 if (createButton) {
+    // 등록 버튼을 클릭하면 /api/articles로 요청을 보냄
     createButton.addEventListener("click", (event) => {
         fetch(`/api/articles`, {
             method: "POST",
