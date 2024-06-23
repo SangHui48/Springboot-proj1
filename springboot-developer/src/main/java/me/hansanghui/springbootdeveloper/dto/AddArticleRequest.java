@@ -15,8 +15,8 @@ public class AddArticleRequest {
     public Article toEntity(String author) {
         return Article.builder()
                 .title(title)
-                .author(author)
                 .content(content)
+                .author(author)
                 .build();
     }
 }

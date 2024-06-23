@@ -39,6 +39,12 @@ public class User implements UserDetails {
         this.nickname = nickname;
     }
 
+    public User update(String nickname) {
+        this.nickname = nickname;
+
+        return this;
+    }
+
     @Override // 권한 반환
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority("user"));
@@ -84,9 +90,4 @@ public class User implements UserDetails {
         return true; // true -> 사용 가능
     }
 
-    public User update(String nickname) {
-        this.nickname = nickname;
-
-        return this;
-    }
 }
